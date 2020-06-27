@@ -6,7 +6,7 @@
 
 $annualExpenses = [
     "vacations" => 1000,
-    "carRepairs" => 1000,    
+    "carRepairs" => 1000,
 ];
 
 $monthlyExpenses = [
@@ -22,8 +22,8 @@ $incomeSegments = [[9700, .88], [29775, .78], [8675, .76]];
 
 // $grossSalary = 48150;
 // $incomeSegments = [
-//     12 => $grossSalary * 0.88, 
-//     22 => $grossSalary * 0.78, 
+//     12 => $grossSalary * 0.88,
+//     22 => $grossSalary * 0.78,
 //     24 => $grossSalary * 0.76];
 
 // $netIncome = $incomeSegments[12] + $incomeSegments[22] + $incomeSegments[24];
@@ -68,19 +68,20 @@ $weeklyExpenses = [
     "entertainment" => 47
 ];
 
+//print_r($weeklyExpenses);
 
+$totalWeeklyExpense = $weeklyExpenses["gas"] + $weeklyExpenses["food"] + $weeklyExpenses["entertainment"];
 
-echo $weeklyIncome - $weeklyExpenses;
+echo $weeklyIncome - $totalWeeklyExpense;
 
 echo "\n";
 
-$save = $weeklyIncome - $weeklyExpenses;
+$save = $weeklyIncome - $totalWeeklyExpense;
 
 echo $save * 52 ;
 
 ?>
-
-
+    
 </body>
 
 </html>
